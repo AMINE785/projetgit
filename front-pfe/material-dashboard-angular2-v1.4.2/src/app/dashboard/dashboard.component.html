@@ -1,0 +1,29 @@
+<div class="main-content">
+  <p  style = "text-align:center; color:rgba(51, 50, 50, 0.562);font-weight: 900; font-size: 30px;" >Number of commit by user</p> 
+
+    <div  *ngIf="customerSources && findOccurence()" >
+        <canvas baseChart
+                    [data]="nbr"
+                    [labels]="list"
+                    [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                  
+                  </canvas>
+      </div> 
+      <div style="margin-top: 1cm">
+      <p  style = "text-align:center; color:rgba(51, 50, 50, 0.562);font-weight: 900; font-size: 30px;" >Number of project</p> 
+      <div  *ngIf="JIRAS && findOccurence2()" >
+        <canvas baseChart
+                    [data]="nbr2"
+                    [labels]="list2"
+                    [chartType]="doughnutChartTyp"
+                    (chartHover)="chartHovere($event)"
+                    (chartClick)="chartClicke($event)">
+                  
+                  </canvas>
+      </div> 
+    </div>
+
+
+</div>

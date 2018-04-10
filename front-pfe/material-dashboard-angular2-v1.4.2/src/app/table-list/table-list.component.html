@@ -1,0 +1,86 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+           
+
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">LOG</h4>
+                        <p class="category">SVN</p>
+                    </div>
+                    <div class="card-content table-responsive">
+                            <span *ngIf="customerSources">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Revesion</th>
+                                    <th>Autheur</th>
+                                    <th>DATE</th>
+                                    <th>Message</th>
+                                    
+                                   
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                   
+                                   
+                                            <tr *ngFor="let customerSource of customerSources" >
+                                                    
+                                      <td >{{customerSource._source.revision}}</td>
+                                      <td >{{customerSource._source.autheur}}</td>
+                                      <td >{{customerSource._source.date}}</td>
+                                     
+                                      <td >{{customerSource._source.message}}</td>
+                                      
+                                
+                                      </tr>
+                               
+                            </tbody>
+                       
+                        </table>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           
+
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">JIRA</h4>
+                        <p class="category">Listof projects</p>
+                    </div>
+                    <div class="card-content table-responsive">
+                            <span *ngIf="JIRAS">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Project Key</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                   
+                                   
+                                            <tr *ngFor="let jira of JIRAS" >
+                                                    
+                                      <td >{{jira._source.name}}</td>
+                                      <td >{{jira._source.key}}</td>
+                                     
+                                      </tr>
+                               
+                            </tbody>
+                       
+                        </table>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
